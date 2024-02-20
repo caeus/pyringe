@@ -1,0 +1,34 @@
+[tool.poetry]
+name = "pyringe"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+packages=[{include="pyringe",from="src"}]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+click = "^8.1.7"
+injector = "^0.21.0"
+wcmatch = "^8.5"
+pydantic = "^2.6.0"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.4"
+pytest-asyncio = "^0.23.4"
+pyright = "^1.1.349"
+ruff = "^0.2.2"
+
+[tool.poetry.scripts]
+asd = 'asd.frontend:main'
+
+
+[tool.pyright]
+include=["src"]
+strict=["*"]
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
